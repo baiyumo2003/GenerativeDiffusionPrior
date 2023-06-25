@@ -1,7 +1,7 @@
 .DS_Store
 __pycache__/
 classify_image_graph_def.pb
-*.npz
+#*.npz
 *.zip
 *.jpeg
 *.JPEG
@@ -35,8 +35,8 @@ scripts/imagenet_dataloader/enhancement_saturation_resolution_64/*
 scripts/imagenet_dataloader/enhancement_saturation_resolution_256/*
 scripts/imagenet_dataloader/enhancement_brightness_resolution_64/*
 scripts/imagenet_dataloader/enhancement_brightness_resolution_256/*
-scripts/imagenet_dataloader/enhancement_*/*
-scripts/imagenet_dataloader/imagenet/*
+#scripts/imagenet_dataloader/enhancement_*/*
+#scripts/imagenet_dataloader/imagenet/*
 generated_image*/*
 scripts/models/*
 *.tar.gz
