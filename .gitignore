@@ -8,7 +8,7 @@ classify_image_graph_def.pb
 *.png
 visualizations
 # *.png
-*.pt
+#*.pt
 !0_label_197.png
 !figs/teaser.png
 evaluations/precomputed
