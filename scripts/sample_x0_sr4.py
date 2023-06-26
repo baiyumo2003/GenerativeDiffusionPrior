@@ -246,15 +246,15 @@ def create_argparser():
         num_samples=100,
         batch_size=1,
         use_ddim=False,
-        model_path="/mnt/data/oss_beijing/baiyumo/256x256_diffusion_uncond.pt"
+        model_path="/mnt/data/digital_content_aigc/feiben/256x256_diffusion_uncond.pt"
     )
     defaults.update(model_and_diffusion_defaults())
     parser = argparse.ArgumentParser()
     add_dict_to_argparser(parser, defaults)
 
 
-    save_dir  = os.path.join('/mnt/data/digital_content_aigc/baiyumo/results', ('generated_image_x0_GDP_' + deg))
-    base_samples  = os.path.join('/mnt/data/digital_content_aigc/baiyumo/', (deg + ('_resolution_256.npz')))
+    save_dir  = os.path.join('/mnt/data/digital_content_aigc/feiben/', ('generated_image_x0_GDP_' + deg))
+    base_samples  = os.path.join('/mnt/data/digital_content_aigc/feiben/', (deg + ('_resolution_256.npz')))
     # add zhaoyang own's arguments
     parser.add_argument("--device", default=0, type=int, help='the cuda device to use to generate images')
     parser.add_argument("--global_rank", default=0, type=int, help='global rank of this process')
@@ -265,7 +265,7 @@ def create_argparser():
     
     # these two arguments are only valid when not start from scratch
     parser.add_argument("--denoise_steps", default=25, type=int, help='number of denoise steps')
-    parser.add_argument("--dataset_path", default='/mnt/data/digital_content_aigc/baiyumo/biggan_deep_imagenet64.npz', type=str, help='path to the generated images. Could be an npz file or an image folder')
+    parser.add_argument("--dataset_path", default='//mnt/data/digital_content_aigc/feiben/biggan_deep_imagenet64.npz', type=str, help='path to the generated images. Could be an npz file or an image folder')
     
     parser.add_argument("--use_img_for_guidance", action='store_true', help='whether to use a (low resolution) image for guidance. If true, we generate an image that is similar to the low resolution image')
     parser.add_argument("--img_guidance_scale", default=2000, type=float, help='guidance scale')
