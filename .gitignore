@@ -1,14 +1,14 @@
 .DS_Store
 __pycache__/
 classify_image_graph_def.pb
-#*.npz
+*.npz
 *.zip
 *.jpeg
 *.JPEG
 *.png
 visualizations
-# *.png
-#*.pt
+ *.png
+*.pt
 !0_label_197.png
 !figs/teaser.png
 evaluations/precomputed
