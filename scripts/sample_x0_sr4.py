@@ -246,15 +246,15 @@ def create_argparser():
         num_samples=100,
         batch_size=1,
         use_ddim=False,
-        model_path="/GENERATIVEDIFFUSIONPRIOR/ckpoint/256x256_diffusion_uncond.pt"
+        model_path="/mnt/data/oss_beijing/baiyumo/256x256_diffusion_uncond.pt"
     )
     defaults.update(model_and_diffusion_defaults())
     parser = argparse.ArgumentParser()
     add_dict_to_argparser(parser, defaults)
 
 
-    save_dir  = os.path.join('/GENERATIVEDIFFUSIONPRIOR/Results', ('generated_image_x0_GDP_' + deg))
-    base_samples  = os.path.join('/GENERATIVEDIFFUSIONPRIOR/ckpoint/', (deg + ('_resolution_256.npz')))
+    save_dir  = os.path.join('/mnt/data/oss_beijing/baiyumo/results', ('generated_image_x0_GDP_' + deg))
+    base_samples  = os.path.join('/mnt/data/oss_beijing/baiyumo/', (deg + ('_resolution_256.npz')))
     # add zhaoyang own's arguments
     parser.add_argument("--device", default=0, type=int, help='the cuda device to use to generate images')
     parser.add_argument("--global_rank", default=0, type=int, help='global rank of this process')
